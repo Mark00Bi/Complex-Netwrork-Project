@@ -84,7 +84,7 @@ pip install networkx matplotlib numpy scikit-learn tqdm
 ## 🧠 Authors
 
 Developed by Achref LOUSSAIEF & Marwen MBARKI
-Course: Network Analysis — Réseaux complexes et validation (2025 - TSP ) 
+Course: Network Analysis — Réseaux complexes et validation (2025 - TSP ) <br>
 Instructed by: Dr. Vincent Gauthier
 
 
