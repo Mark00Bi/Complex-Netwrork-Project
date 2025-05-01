@@ -151,6 +151,29 @@ def plot_results(results_all, output_prefix="results"):
         plt.close()
 
 if __name__ == "__main__":
-    graph_file = "data/data/Caltech36.gml"
-    results = link_prediction_experiment(graph_file, fraction=0.1)
-    plot_results(results, output_prefix="caltech")
+    data_dir = "data"  # folder containing your .gml files
+    graph_files = sorted(
+    [f for f in os.listdir(data_dir) if f.endswith(".gml")],
+    key=lambda f: os.path.getsize(os.path.join(data_dir, f)))[:12]
+
+    all_summary = {}
+
+    for graph_file in graph_files:
+        graph_name = os.path.splitext(graph_file)[0]
+        print(f"\n===== Running on {graph_name} =====")
+        graph_path = os.path.join(data_dir, graph_file)
+
+        try:
+            results = link_prediction_experiment(graph_path, fraction=0.1)
+            plot_results(results, output_prefix=graph_name)
+            all_summary[graph_name] = results
+        except Exception as e:
+            print(f"Failed on {graph_name}: {e}")
+
+    # Optional: save precision@100 for all graphs to compare
+    print("\n\n=== Precision@100 Comparison Across Graphs ===")
+    for graph_name, result in all_summary.items():
+        print(f"\n{graph_name}")
+        for method in result:
+            idx_100 = result[method]["k"].index(100)
+            print(f"{method:15s}: Precision@100 = {result[method]['precision'][idx_100]:.4f}")
