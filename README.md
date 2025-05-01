@@ -11,7 +11,28 @@ This repository includes code and figures corresponding to a multi-part analysis
 ---
 
 ## 📂 Project Structure
-. ├── code/ # Python scripts for each question │ ├── question2.py # Degree distribution & clustering analysis │ ├── question3.py # Assortativity analysis (5 attributes) │ ├── question4.py # Link prediction (Common Neighbors, Jaccard, Adamic/Adar) │ ├── question5.py # Label propagation algorithm for attribute prediction │ └── question6.py # Community detection + hypothesis testing with Louvain │ ├── figures/ # All plots and result images │ ├── q2/ # Degree distribution & clustering plots │ ├── q3/ # Assortativity scatter plots & histograms │ ├── q4/ # Precision, Recall, Top@k plots for link prediction │ ├── q5/ # Label propagation accuracy results │ └── q6/ # Community detection visualizations and NMI scores │ ├── data/ # Directory for Facebook100 .gml graphs (not uploaded) │ └── *.gml # Each file is a university friendship graph  ├── README.md # This file
+
+```bash
+.
+├── code/                        # Python scripts for each question
+│   ├── question2.py            # Degree distribution & clustering analysis
+│   ├── question3.py            # Assortativity analysis (5 attributes)
+│   ├── question4.py            # Link prediction (Common Neighbors, Jaccard, Adamic/Adar)
+│   ├── question5.py            # Label propagation algorithm for attribute prediction
+│   └── question6.py            # Community detection + hypothesis testing with Louvain
+│
+├── figures/                    # All plots and result images
+│   ├── q2/                     # Degree distribution & clustering plots
+│   ├── q3/                     # Assortativity scatter plots & histograms
+│   ├── q4/                     # Precision, Recall, Top@k plots for link prediction
+│   ├── q5/                     # Label propagation accuracy results
+│   └── q6/                     # Community detection visualizations and NMI scores
+│
+├── data/                       # Directory for Facebook100 .gml graphs (not uploaded)
+│   └── *.gml                   # Each file is a university friendship graph
+│
+└── README.md                   # This file
+```
 
 ---
 
@@ -29,11 +50,11 @@ This repository includes code and figures corresponding to a multi-part analysis
   - Degree
   - Major (via `major_index`)
   - Student/Faculty Status (via `student_fac`)
-- Visualizes results using histograms and scatter plots over network size.
+- Visualises results using histograms and scatter plots over network size.
 
 ### ✅ Question 4 – Link Prediction
 - Implements 3 link prediction metrics from scratch:
-  - Common Neighbors
+  - Common Neighbours
   - Jaccard Coefficient
   - Adamic/Adar
 - Evaluates using Precision@k, Recall@k, and Top@k.
@@ -47,7 +68,7 @@ This repository includes code and figures corresponding to a multi-part analysis
 ### ✅ Question 6 – Community Detection
 - Hypothesis: dorm affiliation correlates with social groups.
 - Uses Louvain algorithm to detect communities.
-- Measures alignment with real dorm labels using Normalized Mutual Information (NMI).
+- Measures alignment with real dorm labels using Normalised Mutual Information (NMI).
 
 ---
 
@@ -63,6 +84,7 @@ pip install networkx matplotlib numpy scikit-learn tqdm
 ## 🧠 Authors
 
 Developed by Achref LOUSSAIEF & Marwen MBARKI
-Course: Network Analysis — Réseaux complexes et validation (2025 - TSP ) Instructed by : Dr. Vincent Gauthier
+Course: Network Analysis — Réseaux complexes et validation (2025 - TSP ) 
+Instructed by: Dr. Vincent Gauthier
 
 
