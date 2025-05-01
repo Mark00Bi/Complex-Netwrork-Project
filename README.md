@@ -22,11 +22,11 @@ This repository includes code and figures corresponding to a multi-part analysis
 │   └── question6.py            # Community detection + hypothesis testing with Louvain
 │
 ├── figures/                    # All plots and result images
-│   ├── q2/                     # Degree distribution & clustering plots
+│                               # Degree distribution & clustering plots
 │   ├── q3/                     # Assortativity scatter plots & histograms
 │   ├── q4/                     # Precision, Recall, Top@k plots for link prediction
-│   ├── q5/                     # Label propagation accuracy results
-│   └── q6/                     # Community detection visualizations and NMI scores
+│                               # Label propagation accuracy results
+│                               # Community detection visualizations and NMI scores
 │
 ├── data/                       # Directory for Facebook100 .gml graphs (not uploaded)
 │   └── *.gml                   # Each file is a university friendship graph
